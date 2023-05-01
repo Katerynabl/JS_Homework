@@ -173,9 +173,20 @@ switch(q){
 
 */
 
+//1й варіант  - цей варіант коду не спрацював
+let word = "tomorrow"
+function escapeRegExp(string) {
+return string.replace(/[aeiouy]/gi, '');
+}
 
+//2й варіант - цей варіант коду не спрацював
+let text = "tomorrow";
+let result = string.replace(/[aeiouy]/gi, ''); 
+return (text);
+
+
+//3й -  працюючий варіант 
 let disemvowel = (str) => str.replace(/[aeiouy]/gi, '')
-
 console.log(disemvowel('tomorrow'));
 
 
