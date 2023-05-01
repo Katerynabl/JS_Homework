@@ -172,19 +172,6 @@ switch(q){
 /*8.*  Використовуючи властивості рядків (тип string), та регулярний вираз (regular expression) видалити голосні букви зі слова.
 
 */
-let word = "tomorrow"
-function escapeRegExp(string) {
-return string.replace(/[aeiouy]/gi, '');
-}
-
-
-
-let text = "tomorrow";
-let result = string.replace(/[aeiouy]/gi, ''); 
-return (text);
-
-
-
 
 
 let disemvowel = (str) => str.replace(/[aeiouy]/gi, '')
@@ -200,31 +187,18 @@ console.log(disemvowel('tomorrow'));
     Підказка(https://ukr-lifehacks.ed-era.com/rozdil-9/zvyazok_chislivnykiv)
 */
 
+let x = 13330;// відстань в метрах
+let y = (x/1000);
+{         
+if( y == 1 ) 
+{console.log(y + ' кілометр')}
 
-//var numArr = ['ноль','один','два','три','четыре'];
-//console.log(numArr.indexOf('три')); // выведет 3
+else if ( y > 1 && y <= 4)
+{console.log(y + ' кілометри')}
 
-function numToPr(number){
-    const
-        h = ['сто', 'двести', 'триста', 'четыреста', 'пятьсот', 'шестьсот', 'семьсот', 'восемьсот', 'девятьсот'],
-        t = ['', 'двадцать', 'тридцать', 'сорок', 'пятьдесят', 'шестьдесят', 'семьдесят', 'восемьдесят', 'девяносто'],
-        o = ['один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять'],
-        p = ['одиннацать', 'двенадцать', 'тринадцать', 'четырнадцать', 'пятнадцать', 'шестнадцать', 'семнадцать', 'восемнадцать', 'девятнадцать'];
-    let str = number.toString(), out = '';
+else if ( y >= 5)
+{console.log(y + ' кілометрів')}
 
-    if(str.length == 1) return o[number-1];
-    else if(str.length == 2){
-        if(str[0] == 1) out = p[parseInt(str[1])-1];
-        else out = (t[parseInt(str[0])-1] + ((str[1]!='0')?(' ' + o[parseInt(str[1])-1]):'') + ((str[1]!='1')?));
-    }
-    else if(str.length == 3){
-        out = (h[parseInt(str[0])-1] + ((str[1]!='0')?(' ' + t[parseInt(str[1])-1]):'') + ((str[2]!='0')?(' ' + o[parseInt(str[2])-1]):''));
-    }
-
-    let arr = out.split('');
-    arr[0] = arr[0].toUpperCase();
-    out = arr.join('');
-    return out;
+else if (y < 1) 
+{console.log(y + ' кілометра')}
 }
-
-console.log(numToPr(10));
